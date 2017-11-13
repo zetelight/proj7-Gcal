@@ -65,3 +65,10 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# PyCharm file
+meetings/.idea
+
+# credential file
+google_client_key.json
+credentials.ini

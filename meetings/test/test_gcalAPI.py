@@ -7,7 +7,7 @@ import uuid
 import json
 import logging
 
-# Date handling 
+# Date handling
 import arrow  # Replacement for datetime, based on moment.js
 # import datetime # But we still need time
 from dateutil import tz  # For interpreting local times
@@ -16,7 +16,7 @@ from dateutil import tz  # For interpreting local times
 from oauth2client import client
 import httplib2  # used in oauth2 flow
 
-# Google API for services 
+# Google API for services
 from apiclient import discovery
 
 ###
@@ -80,7 +80,7 @@ def choose():
 #      redirect to OAuth server first, and may take multiple
 #      trips through the oauth2 callback function.
 #
-#  Protocol for use ON EACH REQUEST: 
+#  Protocol for use ON EACH REQUEST:
 #     First, check for valid credentials
 #     If we don't have valid credentials
 #         Get credentials (jump to the oauth2 protocol)
@@ -93,11 +93,11 @@ def choose():
 #  from the Google services. Service objects are NOT serializable ---
 #  we can't stash one in a cookie.  Instead, on each request we
 #  get a fresh service object from our credentials, which are
-#  serializable. 
+#  serializable.
 #
 #  Note that after authorization we always redirect to /choose;
 #  If this is unsatisfactory, we'll need a session variable to use
-#  as a 'continuation' or 'return address' to use instead. 
+#  as a 'continuation' or 'return address' to use instead.
 #
 ####
 
@@ -106,7 +106,7 @@ def valid_credentials():
     Returns OAuth2 credentials if we have valid
     credentials in the session.  This is a 'truthy' value.
     Return None if we don't have credentials, or if they
-    have expired or are otherwise invalid.  This is a 'falsy' value. 
+    have expired or are otherwise invalid.  This is a 'falsy' value.
     """
     if 'credentials' not in flask.session:
         return None
@@ -186,7 +186,7 @@ def oauth2callback():
 #     computation here; use of the information might
 #     depend on what other information we have.
 #   Setting an option sends us back to the main display
-#      page, where we may put the new information to use. 
+#      page, where we may put the new information to use.
 #
 #####
 
@@ -246,14 +246,14 @@ def select():
 
 ####
 #
-#   Initialize session variables 
+#   Initialize session variables
 #
 ####
 
 def init_session_values():
     """
     Start with some reasonable defaults for date and time ranges.
-    Note this must be run in app context ... can't call from main. 
+    Note this must be run in app context ... can't call from main.
     """
     # Default date span = tomorrow to 1 week from now
     now = arrow.now('local')  # We really should be using tz from browser
