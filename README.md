@@ -9,11 +9,9 @@ Snarf appointment data from a selection of a user's Google calendars
 
 ## Functions
 - Application allows the user to choose a date and time range for listing all events during that period.
-- Application allows the user to choose calendars (a single
-user may have several Google calendars, one of which is the 'primary'
-calendar) and list 'blocking'  (non-transparent) appointments between a start date and an end date for some subset of them.
+- Application allows the user to choose calendars (a single user may have several Google calendars, one of which is the 'primary' calendar) and list 'blocking'  (non-transparent) appointments between a start date and an end date for some subset of them.
 
 ## Test
-not ready
+nosetests is ready for testing but it only works for a specified calendar (my calendar actually)
 
 
