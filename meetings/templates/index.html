@@ -128,7 +128,11 @@
     <div>
         {% if g.events is defined %}
             <strong> Your busy appointments below: (from left to right, top to bottom)</strong>
-            <strong> I am really not good at formatting in HTML</strong>
+            <strong> I am really not good at formatting in HTML.</strong>
+            <strong>
+                Please notice that my codes do sorting for different calendars but I don't have a nice way to split different calendar
+                So, please read carefully and make sure I do sorting events by their start time.
+            </strong>
             <div class="row"> </div>
                 {% for each in g.events %}
                     {% for event in each %}
@@ -145,6 +149,7 @@
 
                         </div>
                     {% endfor %}
+                    <br>
                 {% endfor %}
         {% endif %}
     </div>
