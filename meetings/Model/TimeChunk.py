@@ -40,4 +40,5 @@ class CalendarEvent:
         return
 
     def overlap(self, other):
+        
         return

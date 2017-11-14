@@ -114,7 +114,7 @@
                         <input type="checkbox" name="token" id="token" value={{ cal.id }}>
                         {{ cal.summary }}
                     </div>
-                    {% if loop.index is divisibleby 2 %}
+                    {% if loop.index is divisibleby 3 %}
                         </div>
                         <div class="row">
                     {% endif %}
@@ -124,13 +124,13 @@
         <br/>
         <input type="submit" value="submit selected calendar" id="selectedCalendarButton"/>
     </form>
+
     <div>
         {% if g.events is defined %}
             <strong> Your busy appointments below: (from left to right, top to bottom)</strong>
             <strong> I am really not good at formatting in HTML</strong>
             <div class="row"> </div>
                 {% for each in g.events %}
-                    <br>------a lists of events of a new calendar-----</br>
                     {% for event in each %}
                         <div class="col-md-4">
                             <br/>
