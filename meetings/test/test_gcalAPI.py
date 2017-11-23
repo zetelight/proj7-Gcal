@@ -51,7 +51,7 @@ def test_calendar_list():
 
     assert calendars[0]["id"] == "en.usa#holiday@group.v.calendar.google.com"
     assert calendars[0]["summary"] == "Holidays in United States"
-    assert calendars[0]["description"] == "(no description)""
+    assert calendars[0]["description"] == "(no description)"
 
 def test_event_list():
     # since the events is sorted already by start_time, so we can check their contents one by one
